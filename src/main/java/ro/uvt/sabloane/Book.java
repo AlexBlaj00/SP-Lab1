@@ -35,22 +35,14 @@ public class Book extends Section{
     }
 
     public void print() {
-        System.out.println(this);
-        for(Author author: authors) {
-            author.print();
-        }
-
-        for(Chapter chapter: chapterList) {
-            chapter.print();
-        }
+        System.out.println(this.toString());
+        //super.print();
     }
 
     @Override
     public String toString() {
-        return "Book{" +
-                "authors=" + authors +
-                ", title='" + super.getName() + '\'' +
-                '}';
+        return  "Book with name: " + super.getName();
+
     }
 
     public void addConent(Element e) {

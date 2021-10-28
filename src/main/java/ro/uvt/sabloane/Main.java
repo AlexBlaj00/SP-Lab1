@@ -21,8 +21,8 @@ public class Main {
         System.out.println("Creation of the content took " + (endTime -
                 startTime) + " milliseconds");
         startTime = System.currentTimeMillis();
-        playboyS1.print();
-        playboyS2.print();
+        playboy.print();
+        playboy.print();
         endTime = System.currentTimeMillis();
         System.out.println("Printing of the section 1 and 2 took " + (endTime -
                 startTime) + " milliseconds");

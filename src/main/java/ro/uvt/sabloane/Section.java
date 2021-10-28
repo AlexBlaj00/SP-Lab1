@@ -3,7 +3,7 @@ package ro.uvt.sabloane;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element{
+public class Section implements Element {
     private final String name;
     private List<Element> elementList = new ArrayList<>();
 
@@ -27,6 +27,9 @@ public class Section implements Element{
     @Override
     public void print() {
         System.out.println(this.toString());
+        for (Element e : elementList){
+            e.print();
+        }
     }
 
     @Override
