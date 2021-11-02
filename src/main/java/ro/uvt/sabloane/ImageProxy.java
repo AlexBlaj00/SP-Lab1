@@ -1,6 +1,5 @@
 package ro.uvt.sabloane;
 
-import java.awt.*;
 
 public class ImageProxy implements Element, Picture{
     private String url;
@@ -9,7 +8,7 @@ public class ImageProxy implements Element, Picture{
 
     public ImageProxy(String url) {
         this.url = url;
-        this.dim = new Dimension(100, 100);
+        this.dim = new Dimension(5, 10);
     }
 
     public Image loadImage() {
@@ -21,7 +20,8 @@ public class ImageProxy implements Element, Picture{
 
     @Override
     public void print() {
-        loadImage().print();
+        Image image = loadImage();
+        image.print();
     }
 
     @Override

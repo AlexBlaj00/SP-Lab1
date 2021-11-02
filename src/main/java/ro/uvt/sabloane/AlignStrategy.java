@@ -1,5 +1,5 @@
 package ro.uvt.sabloane;
 
 public interface AlignStrategy {
-    String align(String s);
+    void render(Paragraph p, Context c);
 }

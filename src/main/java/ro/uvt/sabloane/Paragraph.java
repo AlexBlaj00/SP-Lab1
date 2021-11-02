@@ -8,16 +8,35 @@ public class Paragraph implements Element {
 
     public Paragraph(String text) {
         this.text = text;
-        this.alignStrategy = new AlignLeft();
     }
+
+
 
     @Override
     public void print() {
-        System.out.println("Paragraph: " + alignStrategy.align(this.text));
+        if (alignStrategy != null) {
+            alignStrategy.render(this, new Context());
+        }
+        else {
+            System.out.println("Paragraph: " + text);
+        }
     }
 
+    public String getText() {
+        return text;
+    }
 
     public void setAlignStrategy(AlignStrategy as) {
         this.alignStrategy = as;
+    }
+
+    public boolean find(Element e) {
+        // TODO Auto-generated method stub
+        if (!(e instanceof Paragraph)) {
+            return false;
+        }
+        else {
+            return ((Paragraph) e).text.equals(this.text);
+        }
     }
 }
